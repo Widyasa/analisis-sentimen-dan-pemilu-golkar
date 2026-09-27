@@ -943,6 +943,12 @@
     "negatif": 39,
     "confidenceDiBawah070": 11,
     "perluTinjauan": 32,
+    "kualitasSumber": {
+      "belumDiverifikasi": 62,
+      "cuplikanTerpotong": 17,
+      "tuduhanPerluVerifikasi": 3,
+      "ringkasanPengumpul": 3
+    },
     "ambang": 0.7,
     "tanggalAwal": "2023-12-25",
     "tanggalAkhir": "2024-04-28",

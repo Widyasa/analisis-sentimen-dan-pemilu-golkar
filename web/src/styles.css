@@ -58,6 +58,36 @@ h1 {
   font-size: 1.05rem;
 }
 
+.unduh {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--kuning);
+  color: #fffdf8;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.unduh:focus-visible {
+  outline: 2px solid var(--biru);
+  outline-offset: 2px;
+}
+
+.aksi-laporan {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.unduh-kedua {
+  background: transparent;
+  color: var(--biru);
+  border: 1px solid var(--garis);
+}
+
 .metrik {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -230,6 +260,17 @@ th button {
   font-size: 0.78rem;
   margin: 8px 0 12px;
 }
+
+.temuan {
+  margin: 0 0 18px;
+  padding: 16px 18px;
+}
+
+.temuan h2 { margin: 0 0 8px; font-size: 1.15rem; }
+
+.grafik-gulir { width: 100%; overflow-x: auto; }
+
+.grafik-gulir .kanvas { min-width: 640px; }
 
 .batas { color: var(--redup); }
 

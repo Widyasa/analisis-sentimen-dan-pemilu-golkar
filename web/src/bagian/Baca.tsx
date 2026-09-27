@@ -1,5 +1,5 @@
 import { data } from "../data";
-import { formatPersen, formatSuara } from "../format";
+import { formatPersen, formatSuara, formatTanggal } from "../format";
 
 export function Baca() {
   return (
@@ -20,12 +20,35 @@ export function Baca() {
           </li>
           <li>Di Aceh, berkas ini memuat partai nasional untuk DPR RI. Partai lokal pada pemilihan DPRA/DPRK tidak termasuk.</li>
         </ul>
+        <h3>Sumber post X</h3>
+        <ul className="daftar">
+          <li>
+            Periode post yang dianalisis: {formatTanggal(data.sentimen.tanggalAwal)} sampai{" "}
+            {formatTanggal(data.sentimen.tanggalAkhir)}.
+          </li>
+          <li>
+            Berkas sumber berisi {data.sentimen.jumlahBerkas} baris.{" "}
+            {data.sentimen.kualitasSumber.ringkasanPengumpul} baris berupa ringkasan pengumpul dan tidak
+            masuk prediksi. {data.sentimen.masukPrediksi} post lainnya diprediksi model.
+          </li>
+          <li>
+            Status kualitas sumber pada {data.sentimen.jumlahBerkas} baris:{" "}
+            {data.sentimen.kualitasSumber.belumDiverifikasi} belum diverifikasi terhadap post asli,{" "}
+            {data.sentimen.kualitasSumber.cuplikanTerpotong} tampak berupa cuplikan terpotong, dan{" "}
+            {data.sentimen.kualitasSumber.tuduhanPerluVerifikasi} berisi tuduhan yang perlu verifikasi
+            independen. Tiga ringkasan pengumpul adalah kategori terpisah.
+          </li>
+          <li>
+            Angka status sumber itu tidak dijumlahkan dengan {data.sentimen.perluTinjauan} post yang
+            ditandai tinjauan manual. Alasan tinjauan dapat bertumpang tindih, misalnya cuplikan yang
+            juga punya confidence rendah.
+          </li>
+        </ul>
         <h3>Sentimen post</h3>
         <ul className="daftar">
           <li>Label positif, netral, dan negatif adalah prediksi model pada seluruh teks post, bukan label manusia.</li>
           <li>Topik berasal dari aturan pencocokan frasa. Keyword atau topik tidak otomatis berlabel positif atau negatif.</li>
           <li>Post yang membandingkan beberapa partai atau tokoh belum tentu sedang menilai Golkar saja.</li>
-          <li>Tiga ringkasan pengumpul tidak diklasifikasikan.</li>
           <li>Ambang 0,70 hanya membantu memilih post yang perlu dibaca manusia.</li>
         </ul>
       </section>

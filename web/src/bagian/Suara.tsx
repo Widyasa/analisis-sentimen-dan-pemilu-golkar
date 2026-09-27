@@ -188,11 +188,12 @@ export function Suara() {
               <option value="peringkat">Urutkan menurut peringkat</option>
             </select>
           </div>
-          <div style={{ width: "100%", height: 860 }}>
+          <div className="grafik-gulir">
+          <div className="kanvas" style={{ width: "100%", height: 860 }}>
             <ResponsiveContainer>
               <BarChart data={grafikProvinsi} layout="vertical" margin={{ left: 8, right: 12, top: 8 }}>
                 <CartesianGrid stroke="#e4dccf" horizontal={false} />
-                <XAxis type="number" unit="%" tickFormatter={(nilai) => formatPersen(Number(nilai), 0)} />
+                <XAxis type="number" tickFormatter={(nilai) => formatPersen(Number(nilai), 0)} />
                 <YAxis
                   type="category"
                   dataKey="provinsi"
@@ -216,8 +217,10 @@ export function Suara() {
               </BarChart>
             </ResponsiveContainer>
           </div>
+          </div>
           <p className="sumber">
-            Penyebut: {data.penyebutPangsa}. Warna gelap: Golkar peringkat 1.
+            Penyebut: {data.penyebutPangsa}. Warna gelap berarti Golkar peringkat 1. Keterangan
+            peringkat juga muncul di tooltip.
           </p>
         </article>
         <article className="panel">
@@ -241,8 +244,7 @@ export function Suara() {
                   dataKey="pangsa"
                   type="number"
                   name="Pangsa"
-                  unit="%"
-                  width={48}
+                  width={56}
                   tickFormatter={(nilai) => formatPersen(Number(nilai), 0)}
                 />
                 <Tooltip

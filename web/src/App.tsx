@@ -5,7 +5,40 @@ import { Suara } from "./bagian/Suara";
 import { data } from "./data";
 import { formatPersen, formatSuara } from "./format";
 
+function Temuan() {
+  const menurutSuara = [...data.provinsi].sort((a, b) => b.suara - a.suara).slice(0, 3);
+  const menurutPangsa = [...data.provinsi].sort((a, b) => b.pangsa - a.pangsa).slice(0, 3);
+  const pangsa = (data.suaraGolkar / data.totalSuaraSah) * 100;
+
+  return (
+    <section className="panel temuan" aria-label="Temuan utama">
+      <h2>Temuan utama</h2>
+      <ul className="daftar">
+        <li>
+          Golkar memperoleh {formatSuara(data.suaraGolkar)} suara sah, atau {formatPersen(pangsa)} dari{" "}
+          {formatSuara(data.totalSuaraSah)} suara sah partai DPR RI, dan berada di peringkat{" "}
+          {data.peringkatNasionalGolkar} nasional.
+        </li>
+        <li>
+          Golkar mendapat suara terbanyak di {data.provinsiPeringkatPertama} dari {data.jumlahProvinsi}{" "}
+          provinsi. Peringkat pertama berarti suara terbanyak, bukan mayoritas.
+        </li>
+        <li>
+          Provinsi dengan jumlah suara Golkar terbesar ({menurutSuara.map((baris) => baris.provinsi).join(", ")})
+          berbeda dari provinsi dengan pangsa Golkar tertinggi (
+          {menurutPangsa.map((baris) => baris.provinsi).join(", ")}).
+        </li>
+      </ul>
+    </section>
+  );
+}
+
 type Tab = "suara" | "sentimen" | "baca";
+
+const LAPORAN = "/laporan_analisis_pemilu_dpr_ri_2024_dan_sentimen_golkar.pdf";
+const NOTEBOOK =
+  "https://github.com/Widyasa/analisis-sentimen-dan-pemilu-golkar/blob/master/notebooks/analisis_hasil_pemilu_dpr_ri_2024.ipynb";
+const GITHUB = "https://github.com/Widyasa/analisis-sentimen-dan-pemilu-golkar";
 
 const TAB: { id: Tab; label: string }[] = [
   { id: "suara", label: "Hasil suara" },
@@ -27,6 +60,17 @@ export default function App() {
           Halaman ini memisahkan dua bacaan: hasil suara sah partai untuk DPR RI, dan prediksi model
           pada post X yang terkumpul tentang Golkar. Keduanya tidak menjelaskan satu sama lain.
         </p>
+        <div className="aksi-laporan">
+          <a className="unduh" href={LAPORAN} target="_blank" rel="noopener noreferrer">
+            Lihat laporan lengkap
+          </a>
+          <a className="unduh unduh-kedua" href={NOTEBOOK} target="_blank" rel="noopener noreferrer">
+            Lihat Jupyter notebook
+          </a>
+          <a className="unduh unduh-kedua" href={GITHUB} target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
       </header>
 
       <section className="metrik" aria-label="Angka utama">
@@ -61,6 +105,8 @@ export default function App() {
           </p>
         </article>
       </section>
+
+      <Temuan />
 
       <div className="tablist" role="tablist" aria-label="Bagian dashboard">
         {TAB.map((item) => (

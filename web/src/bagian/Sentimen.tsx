@@ -28,6 +28,19 @@ export function Sentimen() {
   return (
     <div>
       <section className="panel">
+        <h2>Sumber post yang dianalisis</h2>
+        <p className="catatan">
+          Periode {formatTanggal(s.tanggalAwal)} sampai {formatTanggal(s.tanggalAkhir)}. Dari{" "}
+          {s.jumlahBerkas} baris sumber, {s.kualitasSumber.ringkasanPengumpul} ringkasan pengumpul tidak
+          diprediksi. Status kualitas sumber: {s.kualitasSumber.belumDiverifikasi} belum diverifikasi
+          terhadap post asli, {s.kualitasSumber.cuplikanTerpotong} cuplikan terpotong, dan{" "}
+          {s.kualitasSumber.tuduhanPerluVerifikasi} tuduhan yang perlu verifikasi independen. Kategori
+          itu tidak dijumlahkan dengan {s.perluTinjauan} tanda tinjauan manual, karena alasannya dapat
+          bertumpang tindih.
+        </p>
+      </section>
+
+      <section className="panel">
         <h2>Komposisi prediksi</h2>
         <p className="catatan">
           {s.masukPrediksi} post masuk prediksi. {s.tidakDiklasifikasikan} ringkasan pengumpul tidak
@@ -135,7 +148,8 @@ export function Sentimen() {
           tooltip memakai ukuran kelompok sentimen: {s.positif} positif, {s.netral} netral, {s.negatif}{" "}
           negatif.
         </p>
-        <div style={{ width: "100%", height: 460 }}>
+        <div className="grafik-gulir">
+        <div className="kanvas" style={{ width: "100%", height: 460 }}>
           <ResponsiveContainer>
             <BarChart data={topik} layout="vertical" margin={{ left: 8, right: 16, top: 8 }}>
               <CartesianGrid stroke="#e4dccf" horizontal={false} />
@@ -156,9 +170,10 @@ export function Sentimen() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        </div>
         <p className="sumber">
           Sebuah topik tidak otomatis positif atau negatif. Prediksi membaca teks post secara
-          keseluruhan, bukan sikap terhadap Golkar saja.
+          keseluruhan, bukan sikap terhadap Golkar saja. Warna batang diulang pada legenda teks.
         </p>
       </section>
     </div>

@@ -136,6 +136,16 @@ tinjau = int(masuk["perlu_tinjauan_manual"].sum())
 if di_bawah != 11 or tinjau != 32:
     raise SystemExit(f"Tinjauan tidak sesuai: di bawah ambang {di_bawah}, ditandai {tinjau}")
 
+kualitas = pred["status_kualitas_sumber"].value_counts().to_dict()
+harap_kualitas = {
+    "belum_diverifikasi_terhadap_post_asli": 62,
+    "cuplikan_tampak_terpotong_perlu_konteks": 17,
+    "tuduhan_perlu_verifikasi_independen": 3,
+    "ringkasan_pengumpul_bukan_teks_post": 3,
+}
+if kualitas != harap_kualitas:
+    raise SystemExit(f"Kualitas sumber tidak sesuai: {kualitas}")
+
 masuk["tanggal"] = pd.to_datetime(masuk["tanggal_post"])
 mingguan = (
     masuk.groupby([pd.Grouper(key="tanggal", freq="W-SUN"), "sentimen_model"])
@@ -201,6 +211,12 @@ muatan = {
         "negatif": 39,
         "confidenceDiBawah070": 11,
         "perluTinjauan": 32,
+        "kualitasSumber": {
+            "belumDiverifikasi": 62,
+            "cuplikanTerpotong": 17,
+            "tuduhanPerluVerifikasi": 3,
+            "ringkasanPengumpul": 3,
+        },
         "ambang": 0.7,
         "tanggalAwal": str(masuk["tanggal_post"].min()),
         "tanggalAkhir": str(masuk["tanggal_post"].max()),
