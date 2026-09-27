@@ -21,6 +21,14 @@ type Saringan = "semua" | "pertama" | "bukan";
 const WARNA_GOLKAR = "#8a5a10";
 const WARNA_LAIN = "#94a3b8";
 
+function LabelProvinsi(props: { x?: number; y?: number; payload?: { value?: string } }) {
+  return (
+    <text x={props.x} y={props.y} dy={4} textAnchor="end" fill="#1c1917" fontSize={12}>
+      {props.payload?.value}
+    </text>
+  );
+}
+
 function tigaTeratas(kunci: "suara" | "pangsa"): ProvinsiGolkar[] {
   return [...data.provinsi].sort((a, b) => b[kunci] - a[kunci]).slice(0, 3);
 }
@@ -224,8 +232,7 @@ export function Suara() {
         </p>
       </section>
 
-      <section className="kisi-dua">
-        <article className="panel">
+      <section className="panel">
           <h2>Pangsa Golkar di 38 provinsi</h2>
           <div className="alat">
             <select
@@ -243,16 +250,17 @@ export function Suara() {
             </select>
           </div>
           <div className="grafik-gulir">
-          <div className="kanvas" style={{ width: "100%", height: 860 }}>
+          <div className="kanvas kanvas-provinsi" style={{ width: "100%", height: 980 }}>
             <ResponsiveContainer>
-              <BarChart data={grafikProvinsi} layout="vertical" margin={{ left: 8, right: 12, top: 8 }}>
+              <BarChart data={grafikProvinsi} layout="vertical" margin={{ left: 4, right: 16, top: 8, bottom: 8 }}>
                 <CartesianGrid stroke="#e4dccf" horizontal={false} />
                 <XAxis type="number" tickFormatter={(nilai) => formatPersen(Number(nilai), 0)} />
                 <YAxis
                   type="category"
                   dataKey="provinsi"
-                  width={132}
-                  tick={{ fontSize: 11 }}
+                  width={178}
+                  interval={0}
+                  tick={LabelProvinsi}
                 />
                 <Tooltip
                   formatter={(nilai, _nama, item) => {
@@ -276,8 +284,9 @@ export function Suara() {
             Penyebut: {data.penyebutPangsa}. Warna gelap berarti Golkar peringkat 1. Keterangan
             peringkat juga muncul di tooltip.
           </p>
-        </article>
-        <article className="panel" id="jumlah-dan-pangsa">
+      </section>
+
+      <section className="panel" id="jumlah-dan-pangsa">
           <h2>Jumlah suara dan pangsa</h2>
           <p className="catatan">
             Titik di kanan punya banyak suara. Titik di atas punya pangsa besar. Keduanya tidak
@@ -317,8 +326,7 @@ export function Suara() {
               </ScatterChart>
             </ResponsiveContainer>
           </div>
-          <p className="sumber">Setiap titik adalah satu provinsi. Bukan peta.</p>
-        </article>
+          <p className="sumber">Setiap titik adalah satu provinsi. Bukan peta. Warna gelap berarti Golkar peringkat 1.</p>
       </section>
 
       <section className="panel">

@@ -305,6 +305,8 @@ th button {
 
 .grafik-gulir .kanvas { min-width: 640px; }
 
+.grafik-gulir .kanvas-provinsi { min-width: 760px; }
+
 .batas { color: var(--redup); }
 
 .batas h2 { color: var(--tinta); }
