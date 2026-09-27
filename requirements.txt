@@ -1,0 +1,8 @@
+pandas>=2.2
+matplotlib>=3.8
+jupyter>=1.1
+nbformat>=5.10
+ipykernel>=6.29
+transformers>=4.46
+# torch tidak ditulis di sini. Pasang versi CPU lewat perintah di README
+# agar pip tidak mengambil wheel CUDA yang besar.

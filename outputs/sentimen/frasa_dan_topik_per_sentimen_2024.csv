@@ -1,0 +1,35 @@
+﻿jenis,sentimen_model,nama,jumlah_post,contoh,frasa_yang_cocok
+frasa_berulang,positif,kerja keras,2,Golkar dan PKS ini keren mesin partainya. gak terlihat tokohnya tapi grass root nya kerja keras 👏🏻,
+frasa_berulang,positif,masih bagus,2,Tinggal Golkar sama PKS doang yg image nya masih bagus.,
+frasa_berulang,netral,jadi capres,2,Karena Airlangga ga jadi capres atau cawapres jadi bebas mau pilih siapa ga ada larangan.,
+frasa_berulang,netral,jadi capres cawapres,2,Karena Airlangga ga jadi capres atau cawapres jadi bebas mau pilih siapa ga ada larangan.,
+frasa_berulang,netral,capres cawapres,3,Karena Airlangga ga jadi capres atau cawapres jadi bebas mau pilih siapa ga ada larangan.,
+frasa_berulang,netral,partai besar,2,"Sbg partai besar harusnya bisa ajukan capres, minimal cawapres dari kader sendiri",
+frasa_berulang,netral,naik suaranya,2,No. Prabowo bukan Ganjar. Golkar bs naik suaranya krn Prabowo Gibran. Jd harusnya mrk bs lebih tahu diri.,
+frasa_berulang,netral,serangan fajar,2,"Golkar besar krn serangan fajar, sudah pengalaman sejak orde baru",
+frasa_berulang,negatif,pasang foto,2,"Tapi kalo caleg-caleg Nasdem, selalu pasang foto AMIN. Rame menurutku. Sama kayak PKS dan PKB. Beda jauh, caleg Demokrat, Golkar, atau PSI, nggak pasang capres cawapres mereka.",
+frasa_berulang,negatif,terlalu kuat,2,golkar (partai yang akar rumputnya gak terlalu kuat),
+topik,positif,suara naik atau suara tinggi,2,"PDIP unggul tapi kalau dibandingkan 2019 Suara PDIP yg mencapai 19,33℅ turun lebih kuran 3℅ dibandingkan skrng. Justru Golkar yg suaranya naik, kemungkin kursi golkar di senayan bisa lebih besar dri PDIP.",suaranya naik
+topik,netral,suara naik atau suara tinggi,3,No. Prabowo bukan Ganjar. Golkar bs naik suaranya krn Prabowo Gibran. Jd harusnya mrk bs lebih tahu diri.,naik suaranya
+topik,negatif,suara naik atau suara tinggi,7,"Golkar nda dapat apa2, padahal suaranya lebih tinggi",suaranya lebih tinggi
+topik,positif,kursi DPR,2,"PDIP unggul tapi kalau dibandingkan 2019 Suara PDIP yg mencapai 19,33℅ turun lebih kuran 3℅ dibandingkan skrng. Justru Golkar yg suaranya naik, kemungkin kursi golkar di senayan bisa lebih besar dri PDIP.",kursi golkar
+topik,netral,kursi DPR,3,Tertinggi suara itu blm tentu linier dg jumlah kursi. PDIP 16% dan Golkar 15% sangat mungkin kursi Golkar lbh banyak,jumlah kursi
+topik,negatif,kursi DPR,2,"Keknya abis ini nanti ada keributan dimana bisa aja Golkar dapet lebih banyak kursi, karena suara pemilihnya lebih seimbang di berbagai daerah.",lebih banyak kursi
+topik,positif,perbandingan dengan PDIP,1,"PDIP unggul tapi kalau dibandingkan 2019 Suara PDIP yg mencapai 19,33℅ turun lebih kuran 3℅ dibandingkan skrng. Justru Golkar yg suaranya naik, kemungkin kursi golkar di senayan bisa lebih besar dri PDIP.",pdip unggul
+topik,netral,perbandingan dengan PDIP,1,Tertinggi suara itu blm tentu linier dg jumlah kursi. PDIP 16% dan Golkar 15% sangat mungkin kursi Golkar lbh banyak,kursi pdip
+topik,negatif,perbandingan dengan PDIP,1,"PDIP menang cm dalam hal suara terbanyak. Tp soal jumlah kursi, Golkar lbh banyak. Pengen liat ketua DPR diambil Golkar.",pdip menang cm dalam hal suara
+topik,netral,capres dan cawapres,4,Karena Airlangga ga jadi capres atau cawapres jadi bebas mau pilih siapa ga ada larangan.,jadi capres
+topik,negatif,capres dan cawapres,2,"Tapi kalo caleg-caleg Nasdem, selalu pasang foto AMIN. Rame menurutku. Sama kayak PKS dan PKB. Beda jauh, caleg Demokrat, Golkar, atau PSI, nggak pasang capres cawapres mereka.",capres cawapres
+topik,netral,jatah menteri,3,partai ini sdh mematok jatah Kursi Menteri. Golkar 5 Menteri…,kursi menteri
+topik,negatif,jatah menteri,2,lucu bgt golkar minta posisi kabinet setara perdana menteri lol mending lu bikin negara sendiri bray,posisi kabinet
+topik,positif,mesin partai dan kader,3,Golkar dan PKS ini keren mesin partainya. gak terlihat tokohnya tapi grass root nya kerja keras 👏🏻,mesin partai
+topik,netral,mesin partai dan kader,1,"Ibarat kapal, mesin partai (Caleg) seperti Golkar, PDIP kualitasnya level Messi-Ronaldo.",mesin partai
+topik,negatif,mesin partai dan kader,1,Mesin partai Gerindra mah ngga ada apa2nya dibanding PDI sama Golkar,mesin partai
+topik,positif,orde baru atau serangan fajar,1,reformasi yg berdarah-darah tapi hasilnya kekuatan orde baru sekarang malah makin kuat salah satunya partai golkar tiap pemilu makin besar suaranya,orde baru
+topik,netral,orde baru atau serangan fajar,2,"Golkar besar krn serangan fajar, sudah pengalaman sejak orde baru",serangan fajar
+topik,negatif,orde baru atau serangan fajar,2,"partai2 darah orba macam golkar, gerindra, nasdem itu bukan partai jiwa oposisi melainkan partai jiwa oportunis.",orba
+topik,netral,oposisi atau koalisi,1,menurut sy yg pantas jd oposisi itu malah PDIP dan Golkar lho.,oposisi
+topik,negatif,oposisi atau koalisi,4,"partai2 darah orba macam golkar, gerindra, nasdem itu bukan partai jiwa oposisi melainkan partai jiwa oportunis.",oposisi
+topik,positif,caleg dan kampanye,1,Selamat untuk teman2 di Golkar. Bisa nyalip Gerindra ini pasti kerja keras jaringan caleg2 dan grassroot.,caleg2
+topik,netral,caleg dan kampanye,3,"Lihat baliho PAN, Golkar dan Demokrat sepanjang jalan aja ngga ada yg pasang foto Wowo .. Dukungannya terpaksa 😁",baliho
+topik,negatif,caleg dan kampanye,6,"Tapi kalo caleg-caleg Nasdem, selalu pasang foto AMIN. Rame menurutku. Sama kayak PKS dan PKB. Beda jauh, caleg Demokrat, Golkar, atau PSI, nggak pasang capres cawapres mereka.",caleg
