@@ -145,6 +145,7 @@ export default function App() {
         {tab === "sentimen" ? <Sentimen /> : null}
         {tab === "baca" ? <Baca /> : null}
       </div>
+      <footer className="kaki">Dibuat oleh Widya Yasa.</footer>
     </main>
   );
 }

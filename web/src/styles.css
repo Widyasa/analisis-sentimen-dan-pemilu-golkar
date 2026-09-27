@@ -309,6 +309,14 @@ th button {
 
 .batas h2 { color: var(--tinta); }
 
+.kaki {
+  margin-top: 28px;
+  padding-top: 16px;
+  border-top: 1px solid var(--garis);
+  color: var(--redup);
+  font-size: 0.9rem;
+}
+
 @media (max-width: 900px) {
   .metrik, .kisi-dua, .sorot, .komposisi { grid-template-columns: 1fr; }
 }
