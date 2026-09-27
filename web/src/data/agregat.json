@@ -1,0 +1,1182 @@
+{
+  "suaraGolkar": 23208488,
+  "totalSuaraSah": 151793293,
+  "peringkatNasionalGolkar": 2,
+  "provinsiPeringkatPertama": 14,
+  "jumlahProvinsi": 38,
+  "aturanSelisih": "Positif bila Golkar peringkat 1 dan selisih dihitung terhadap peringkat 2. Negatif bila Golkar bukan peringkat 1 dan selisih dihitung terhadap peringkat 1.",
+  "penyebutPangsa": "total suara sah partai DPR RI di provinsi yang sama",
+  "partai": [
+    {
+      "nomor": 3,
+      "nama": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 25384673,
+      "pangsa": 16.723184864300954,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 4,
+      "nama": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 23208488,
+      "pangsa": 15.289534564613472,
+      "ambang": "MEMENUHI",
+      "golkar": true
+    },
+    {
+      "nomor": 2,
+      "nama": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 20071345,
+      "pangsa": 13.222814133164631,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 1,
+      "nama": "Partai Kebangkitan Bangsa",
+      "singkatan": "PKB",
+      "suara": 16115358,
+      "pangsa": 10.616646942365234,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 5,
+      "nama": "Partai NasDem",
+      "singkatan": "NasDem",
+      "suara": 14660328,
+      "pangsa": 9.658086803611276,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 8,
+      "nama": "Partai Keadilan Sejahtera",
+      "singkatan": "PKS",
+      "suara": 12781241,
+      "pangsa": 8.420161884227651,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 14,
+      "nama": "Partai Demokrat",
+      "singkatan": "Demokrat",
+      "suara": 11283053,
+      "pangsa": 7.433169659215444,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 12,
+      "nama": "Partai Amanat Nasional",
+      "singkatan": "PAN",
+      "suara": 10984639,
+      "pangsa": 7.236577310434922,
+      "ambang": "MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 17,
+      "nama": "Partai Persatuan Pembangunan",
+      "singkatan": "PPP",
+      "suara": 5878708,
+      "pangsa": 3.8728377807838976,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 15,
+      "nama": "Partai Solidaritas Indonesia",
+      "singkatan": "PSI",
+      "suara": 4260108,
+      "pangsa": 2.806519257738219,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 16,
+      "nama": "Partai PERINDO",
+      "singkatan": "Perindo",
+      "suara": 1955131,
+      "pangsa": 1.288021994489572,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 7,
+      "nama": "Partai Gelombang Rakyat Indonesia",
+      "singkatan": "Gelora",
+      "suara": 1282000,
+      "pangsa": 0.8445695950479183,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 10,
+      "nama": "Partai Hati Nurani Rakyat",
+      "singkatan": "Hanura",
+      "suara": 1094599,
+      "pangsa": 0.7211115711153325,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 6,
+      "nama": "Partai Buruh",
+      "singkatan": "Buruh",
+      "suara": 972898,
+      "pangsa": 0.6409360919523631,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 24,
+      "nama": "Partai Ummat",
+      "singkatan": "Ummat",
+      "suara": 642550,
+      "pangsa": 0.42330592300939146,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 13,
+      "nama": "Partai Bulan Bintang",
+      "singkatan": "PBB",
+      "suara": 484487,
+      "pangsa": 0.31917549874881496,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 11,
+      "nama": "Partai Garda Republik Indonesia",
+      "singkatan": "Garuda",
+      "suara": 406884,
+      "pangsa": 0.26805136904171384,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    },
+    {
+      "nomor": 9,
+      "nama": "Partai Kebangkitan Nusantara",
+      "singkatan": "PKN",
+      "suara": 326803,
+      "pangsa": 0.21529475613919252,
+      "ambang": "TIDAK MEMENUHI",
+      "golkar": false
+    }
+  ],
+  "provinsi": [
+    {
+      "provinsi": "Aceh",
+      "peringkat": 1,
+      "suara": 594213,
+      "pangsa": 19.4969,
+      "totalProvinsi": 3047729,
+      "pembanding": "Partai Kebangkitan Bangsa",
+      "pembandingSingkat": "PKB",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 587783,
+      "selisih": 6430,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Sumatera Utara",
+      "peringkat": 1,
+      "suara": 1712074,
+      "pangsa": 23.1093,
+      "totalProvinsi": 7408581,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 1383049,
+      "selisih": 329025,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Sumatera Barat",
+      "peringkat": 5,
+      "suara": 354500,
+      "pangsa": 12.1394,
+      "totalProvinsi": 2920240,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 475586,
+      "selisih": -121086,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Riau",
+      "peringkat": 1,
+      "suara": 770977,
+      "pangsa": 22.7275,
+      "totalProvinsi": 3392259,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 431177,
+      "selisih": 339800,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Jambi",
+      "peringkat": 1,
+      "suara": 341039,
+      "pangsa": 17.4737,
+      "totalProvinsi": 1951724,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 318124,
+      "selisih": 22915,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Sumatera Selatan",
+      "peringkat": 1,
+      "suara": 857642,
+      "pangsa": 17.5934,
+      "totalProvinsi": 4874788,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 834680,
+      "selisih": 22962,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Bengkulu",
+      "peringkat": 1,
+      "suara": 324563,
+      "pangsa": 28.1832,
+      "totalProvinsi": 1151620,
+      "pembanding": "Partai Amanat Nasional",
+      "pembandingSingkat": "PAN",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 188346,
+      "selisih": 136217,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Lampung",
+      "peringkat": 3,
+      "suara": 670414,
+      "pangsa": 14.4118,
+      "totalProvinsi": 4651843,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 806836,
+      "selisih": -136422,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Kepulauan Bangka Belitung",
+      "peringkat": 3,
+      "suara": 115549,
+      "pangsa": 14.9711,
+      "totalProvinsi": 771812,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 172949,
+      "selisih": -57400,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Kepulauan Riau",
+      "peringkat": 1,
+      "suara": 166147,
+      "pangsa": 15.7635,
+      "totalProvinsi": 1053995,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 164310,
+      "selisih": 1837,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "DKI Jakarta",
+      "peringkat": 4,
+      "suara": 684464,
+      "pangsa": 10.3034,
+      "totalProvinsi": 6643110,
+      "pembanding": "Partai Keadilan Sejahtera",
+      "pembandingSingkat": "PKS",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 1195699,
+      "selisih": -511235,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Jawa Barat",
+      "peringkat": 1,
+      "suara": 4292082,
+      "pangsa": 16.325,
+      "totalProvinsi": 26291451,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 4197376,
+      "selisih": 94706,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Jawa Tengah",
+      "peringkat": 3,
+      "suara": 2648583,
+      "pangsa": 12.6454,
+      "totalProvinsi": 20944956,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 5846493,
+      "selisih": -3197910,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "DI Yogyakarta",
+      "peringkat": 2,
+      "suara": 302845,
+      "pangsa": 13.1971,
+      "totalProvinsi": 2294779,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 593969,
+      "selisih": -291124,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Jawa Timur",
+      "peringkat": 4,
+      "suara": 3232091,
+      "pangsa": 13.728,
+      "totalProvinsi": 23543816,
+      "pembanding": "Partai Kebangkitan Bangsa",
+      "pembandingSingkat": "PKB",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 4155974,
+      "selisih": -923883,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Banten",
+      "peringkat": 1,
+      "suara": 931287,
+      "pangsa": 14.3634,
+      "totalProvinsi": 6483737,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 818889,
+      "selisih": 112398,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Bali",
+      "peringkat": 2,
+      "suara": 333521,
+      "pangsa": 13.554,
+      "totalProvinsi": 2460686,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 1290884,
+      "selisih": -957363,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Nusa Tenggara Barat",
+      "peringkat": 4,
+      "suara": 285263,
+      "pangsa": 9.4892,
+      "totalProvinsi": 3006171,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 434155,
+      "selisih": -148892,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Nusa Tenggara Timur",
+      "peringkat": 2,
+      "suara": 378996,
+      "pangsa": 13.5302,
+      "totalProvinsi": 2801119,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 447442,
+      "selisih": -68446,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Kalimantan Barat",
+      "peringkat": 3,
+      "suara": 409076,
+      "pangsa": 13.6073,
+      "totalProvinsi": 3006307,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 735610,
+      "selisih": -326534,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Kalimantan Tengah",
+      "peringkat": 2,
+      "suara": 193871,
+      "pangsa": 14.3118,
+      "totalProvinsi": 1354625,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 295749,
+      "selisih": -101878,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Kalimantan Selatan",
+      "peringkat": 1,
+      "suara": 501255,
+      "pangsa": 22.4797,
+      "totalProvinsi": 2229816,
+      "pembanding": "Partai Amanat Nasional",
+      "pembandingSingkat": "PAN",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 372607,
+      "selisih": 128648,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Kalimantan Timur",
+      "peringkat": 1,
+      "suara": 538115,
+      "pangsa": 26.7184,
+      "totalProvinsi": 2014025,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 307260,
+      "selisih": 230855,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Kalimantan Utara",
+      "peringkat": 5,
+      "suara": 24992,
+      "pangsa": 6.5862,
+      "totalProvinsi": 379458,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 126507,
+      "selisih": -101515,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Sulawesi Utara",
+      "peringkat": 3,
+      "suara": 203548,
+      "pangsa": 13.2732,
+      "totalProvinsi": 1533523,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 511270,
+      "selisih": -307722,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Sulawesi Tengah",
+      "peringkat": 1,
+      "suara": 330971,
+      "pangsa": 19.2611,
+      "totalProvinsi": 1718343,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 256799,
+      "selisih": 74172,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Sulawesi Selatan",
+      "peringkat": 3,
+      "suara": 814225,
+      "pangsa": 16.0235,
+      "totalProvinsi": 5081429,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 960959,
+      "selisih": -146734,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Sulawesi Tenggara",
+      "peringkat": 5,
+      "suara": 149788,
+      "pangsa": 10.2712,
+      "totalProvinsi": 1458333,
+      "pembanding": "Partai Gerakan Indonesia Raya",
+      "pembandingSingkat": "Gerindra",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 233478,
+      "selisih": -83690,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Gorontalo",
+      "peringkat": 2,
+      "suara": 163074,
+      "pangsa": 21.9841,
+      "totalProvinsi": 741783,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 227533,
+      "selisih": -64459,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Sulawesi Barat",
+      "peringkat": 5,
+      "suara": 99793,
+      "pangsa": 12.7085,
+      "totalProvinsi": 785247,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 142496,
+      "selisih": -42703,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Maluku",
+      "peringkat": 6,
+      "suara": 87508,
+      "pangsa": 8.4129,
+      "totalProvinsi": 1040166,
+      "pembanding": "Partai Amanat Nasional",
+      "pembandingSingkat": "PAN",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 178770,
+      "selisih": -91262,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Maluku Utara",
+      "peringkat": 2,
+      "suara": 128475,
+      "pangsa": 18.3719,
+      "totalProvinsi": 699302,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 146937,
+      "selisih": -18462,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Papua",
+      "peringkat": 4,
+      "suara": 71845,
+      "pangsa": 10.9034,
+      "totalProvinsi": 658922,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 154548,
+      "selisih": -82703,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Papua Barat",
+      "peringkat": 1,
+      "suara": 95883,
+      "pangsa": 29.864,
+      "totalProvinsi": 321066,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 52964,
+      "selisih": 42919,
+      "makna": "memimpin partai peringkat 2"
+    },
+    {
+      "provinsi": "Papua Selatan",
+      "peringkat": 5,
+      "suara": 30449,
+      "pangsa": 10.0364,
+      "totalProvinsi": 303385,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 54416,
+      "selisih": -23967,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Papua Tengah",
+      "peringkat": 2,
+      "suara": 256718,
+      "pangsa": 22.7853,
+      "totalProvinsi": 1126683,
+      "pembanding": "Partai Demokrasi Indonesia Perjuangan",
+      "pembandingSingkat": "PDI-P",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 289738,
+      "selisih": -33020,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Papua Pegunungan",
+      "peringkat": 9,
+      "suara": 9866,
+      "pangsa": 0.7552,
+      "totalProvinsi": 1306436,
+      "pembanding": "Partai NasDem",
+      "pembandingSingkat": "NasDem",
+      "peringkatPembanding": 1,
+      "suaraPembanding": 482364,
+      "selisih": -472498,
+      "makna": "tertinggal dari partai peringkat 1"
+    },
+    {
+      "provinsi": "Papua Barat Daya",
+      "peringkat": 1,
+      "suara": 102786,
+      "pangsa": 30.2287,
+      "totalProvinsi": 340028,
+      "pembanding": "Partai Demokrat",
+      "pembandingSingkat": "Demokrat",
+      "peringkatPembanding": 2,
+      "suaraPembanding": 44618,
+      "selisih": 58168,
+      "makna": "memimpin partai peringkat 2"
+    }
+  ],
+  "pemenangProvinsi": [
+    {
+      "provinsi": "Aceh",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 594213,
+      "pangsa": 19.4969
+    },
+    {
+      "provinsi": "Sumatera Utara",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 1712074,
+      "pangsa": 23.1093
+    },
+    {
+      "provinsi": "Sumatera Barat",
+      "partai": "Partai NasDem",
+      "singkatan": "NasDem",
+      "suara": 475586,
+      "pangsa": 16.2859
+    },
+    {
+      "provinsi": "Riau",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 770977,
+      "pangsa": 22.7275
+    },
+    {
+      "provinsi": "Jambi",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 341039,
+      "pangsa": 17.4737
+    },
+    {
+      "provinsi": "Sumatera Selatan",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 857642,
+      "pangsa": 17.5934
+    },
+    {
+      "provinsi": "Bengkulu",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 324563,
+      "pangsa": 28.1832
+    },
+    {
+      "provinsi": "Lampung",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 806836,
+      "pangsa": 17.3444
+    },
+    {
+      "provinsi": "Kepulauan Bangka Belitung",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 172949,
+      "pangsa": 22.4082
+    },
+    {
+      "provinsi": "Kepulauan Riau",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 166147,
+      "pangsa": 15.7635
+    },
+    {
+      "provinsi": "DKI Jakarta",
+      "partai": "Partai Keadilan Sejahtera",
+      "singkatan": "PKS",
+      "suara": 1195699,
+      "pangsa": 17.9991
+    },
+    {
+      "provinsi": "Jawa Barat",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 4292082,
+      "pangsa": 16.325
+    },
+    {
+      "provinsi": "Jawa Tengah",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 5846493,
+      "pangsa": 27.9136
+    },
+    {
+      "provinsi": "DI Yogyakarta",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 593969,
+      "pangsa": 25.8835
+    },
+    {
+      "provinsi": "Jawa Timur",
+      "partai": "Partai Kebangkitan Bangsa",
+      "singkatan": "PKB",
+      "suara": 4155974,
+      "pangsa": 17.6521
+    },
+    {
+      "provinsi": "Banten",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 931287,
+      "pangsa": 14.3634
+    },
+    {
+      "provinsi": "Bali",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 1290884,
+      "pangsa": 52.4603
+    },
+    {
+      "provinsi": "Nusa Tenggara Barat",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 434155,
+      "pangsa": 14.4421
+    },
+    {
+      "provinsi": "Nusa Tenggara Timur",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 447442,
+      "pangsa": 15.9737
+    },
+    {
+      "provinsi": "Kalimantan Barat",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 735610,
+      "pangsa": 24.4689
+    },
+    {
+      "provinsi": "Kalimantan Tengah",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 295749,
+      "pangsa": 21.8325
+    },
+    {
+      "provinsi": "Kalimantan Selatan",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 501255,
+      "pangsa": 22.4797
+    },
+    {
+      "provinsi": "Kalimantan Timur",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 538115,
+      "pangsa": 26.7184
+    },
+    {
+      "provinsi": "Kalimantan Utara",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 126507,
+      "pangsa": 33.3389
+    },
+    {
+      "provinsi": "Sulawesi Utara",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 511270,
+      "pangsa": 33.3396
+    },
+    {
+      "provinsi": "Sulawesi Tengah",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 330971,
+      "pangsa": 19.2611
+    },
+    {
+      "provinsi": "Sulawesi Selatan",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 960959,
+      "pangsa": 18.9112
+    },
+    {
+      "provinsi": "Sulawesi Tenggara",
+      "partai": "Partai Gerakan Indonesia Raya",
+      "singkatan": "Gerindra",
+      "suara": 233478,
+      "pangsa": 16.0099
+    },
+    {
+      "provinsi": "Gorontalo",
+      "partai": "Partai NasDem",
+      "singkatan": "NasDem",
+      "suara": 227533,
+      "pangsa": 30.6738
+    },
+    {
+      "provinsi": "Sulawesi Barat",
+      "partai": "Partai NasDem",
+      "singkatan": "NasDem",
+      "suara": 142496,
+      "pangsa": 18.1466
+    },
+    {
+      "provinsi": "Maluku",
+      "partai": "Partai Amanat Nasional",
+      "singkatan": "PAN",
+      "suara": 178770,
+      "pangsa": 17.1867
+    },
+    {
+      "provinsi": "Maluku Utara",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 146937,
+      "pangsa": 21.012
+    },
+    {
+      "provinsi": "Papua",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 154548,
+      "pangsa": 23.4547
+    },
+    {
+      "provinsi": "Papua Barat",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 95883,
+      "pangsa": 29.864
+    },
+    {
+      "provinsi": "Papua Selatan",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 54416,
+      "pangsa": 17.9363
+    },
+    {
+      "provinsi": "Papua Tengah",
+      "partai": "Partai Demokrasi Indonesia Perjuangan",
+      "singkatan": "PDI-P",
+      "suara": 289738,
+      "pangsa": 25.716
+    },
+    {
+      "provinsi": "Papua Pegunungan",
+      "partai": "Partai NasDem",
+      "singkatan": "NasDem",
+      "suara": 482364,
+      "pangsa": 36.9221
+    },
+    {
+      "provinsi": "Papua Barat Daya",
+      "partai": "Partai Golongan Karya",
+      "singkatan": "Golkar",
+      "suara": 102786,
+      "pangsa": 30.2287
+    }
+  ],
+  "sentimen": {
+    "jumlahBerkas": 85,
+    "masukPrediksi": 82,
+    "tidakDiklasifikasikan": 3,
+    "positif": 16,
+    "netral": 27,
+    "negatif": 39,
+    "confidenceDiBawah070": 11,
+    "perluTinjauan": 32,
+    "ambang": 0.7,
+    "tanggalAwal": "2023-12-25",
+    "tanggalAkhir": "2024-04-28",
+    "mingguan": [
+      {
+        "akhirMinggu": "2023-12-31",
+        "positif": 0,
+        "netral": 0,
+        "negatif": 1
+      },
+      {
+        "akhirMinggu": "2024-01-14",
+        "positif": 0,
+        "netral": 0,
+        "negatif": 2
+      },
+      {
+        "akhirMinggu": "2024-01-21",
+        "positif": 0,
+        "netral": 2,
+        "negatif": 0
+      },
+      {
+        "akhirMinggu": "2024-01-28",
+        "positif": 0,
+        "netral": 0,
+        "negatif": 1
+      },
+      {
+        "akhirMinggu": "2024-02-04",
+        "positif": 0,
+        "netral": 1,
+        "negatif": 2
+      },
+      {
+        "akhirMinggu": "2024-02-11",
+        "positif": 1,
+        "netral": 1,
+        "negatif": 1
+      },
+      {
+        "akhirMinggu": "2024-02-18",
+        "positif": 6,
+        "netral": 4,
+        "negatif": 15
+      },
+      {
+        "akhirMinggu": "2024-02-25",
+        "positif": 3,
+        "netral": 5,
+        "negatif": 2
+      },
+      {
+        "akhirMinggu": "2024-03-03",
+        "positif": 1,
+        "netral": 3,
+        "negatif": 6
+      },
+      {
+        "akhirMinggu": "2024-03-10",
+        "positif": 1,
+        "netral": 1,
+        "negatif": 2
+      },
+      {
+        "akhirMinggu": "2024-03-17",
+        "positif": 2,
+        "netral": 2,
+        "negatif": 0
+      },
+      {
+        "akhirMinggu": "2024-03-24",
+        "positif": 1,
+        "netral": 3,
+        "negatif": 3
+      },
+      {
+        "akhirMinggu": "2024-03-31",
+        "positif": 0,
+        "netral": 1,
+        "negatif": 2
+      },
+      {
+        "akhirMinggu": "2024-04-07",
+        "positif": 0,
+        "netral": 0,
+        "negatif": 1
+      },
+      {
+        "akhirMinggu": "2024-04-14",
+        "positif": 1,
+        "netral": 2,
+        "negatif": 0
+      },
+      {
+        "akhirMinggu": "2024-04-28",
+        "positif": 0,
+        "netral": 2,
+        "negatif": 1
+      }
+    ],
+    "confidence": [
+      {
+        "rentang": "0,40–0,50",
+        "jumlah": 1
+      },
+      {
+        "rentang": "0,50–0,60",
+        "jumlah": 5
+      },
+      {
+        "rentang": "0,60–0,70",
+        "jumlah": 5
+      },
+      {
+        "rentang": "0,70–0,80",
+        "jumlah": 4
+      },
+      {
+        "rentang": "0,80–0,90",
+        "jumlah": 7
+      },
+      {
+        "rentang": "0,90–1,00",
+        "jumlah": 60
+      }
+    ],
+    "topik": [
+      {
+        "nama": "suara naik atau suara tinggi",
+        "positif": 2,
+        "netral": 3,
+        "negatif": 7
+      },
+      {
+        "nama": "caleg dan kampanye",
+        "positif": 1,
+        "netral": 3,
+        "negatif": 6
+      },
+      {
+        "nama": "kursi DPR",
+        "positif": 2,
+        "netral": 3,
+        "negatif": 2
+      },
+      {
+        "nama": "capres dan cawapres",
+        "positif": 0,
+        "netral": 4,
+        "negatif": 2
+      },
+      {
+        "nama": "jatah menteri",
+        "positif": 0,
+        "netral": 3,
+        "negatif": 2
+      },
+      {
+        "nama": "mesin partai dan kader",
+        "positif": 3,
+        "netral": 1,
+        "negatif": 1
+      },
+      {
+        "nama": "oposisi atau koalisi",
+        "positif": 0,
+        "netral": 1,
+        "negatif": 4
+      },
+      {
+        "nama": "orde baru atau serangan fajar",
+        "positif": 1,
+        "netral": 2,
+        "negatif": 2
+      },
+      {
+        "nama": "perbandingan dengan PDIP",
+        "positif": 1,
+        "netral": 1,
+        "negatif": 1
+      }
+    ],
+    "frasa": [
+      {
+        "sentimen": "positif",
+        "frasa": "kerja keras",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "positif",
+        "frasa": "masih bagus",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "jadi capres",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "jadi capres cawapres",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "capres cawapres",
+        "jumlahPost": 3
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "partai besar",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "naik suaranya",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "netral",
+        "frasa": "serangan fajar",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "negatif",
+        "frasa": "pasang foto",
+        "jumlahPost": 2
+      },
+      {
+        "sentimen": "negatif",
+        "frasa": "terlalu kuat",
+        "jumlahPost": 2
+      }
+    ]
+  }
+}

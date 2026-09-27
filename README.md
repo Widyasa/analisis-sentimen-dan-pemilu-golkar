@@ -53,3 +53,20 @@ Kolom `label_sentimen_usulan` tetap ada sebagai usulan awal pada berkas sumber. 
 - Model dilatih pada dokumen sentimen Prosa, bukan pada post X politik. Confidence tinggi bukan label manusia.
 - Berkas post tidak punya kolom provinsi, jadi sentimen tidak bisa disejajarkan dengan suara per provinsi.
 - Post yang terkumpul bukan sampel survei. Sentimen tidak menjelaskan dan tidak menyebabkan hasil suara.
+
+## Dashboard web
+
+Aplikasi ada di folder `web`. Ia hanya membaca angka agregat di `web/src/data/agregat.json`. CSV post, username, dan teks post tidak ikut ke bundle.
+
+Menjalankan lokal, dari folder `web`:
+
+```powershell
+npm install
+npm run dev
+```
+
+Build produksi: `npm run build`. Hasilnya di `web/dist`.
+
+Deploy ke Vercel dilakukan manual. Saat mengimpor repository, atur **Root Directory** ke `web`. Framework preset: Vite. Perintah build `npm run build`, folder output `dist`. Tidak ada environment variable. Model NLP tidak dijalankan saat build.
+
+Jika CSV analisis berubah, jalankan ulang `python web/scripts/buat_agregat.py` dari folder proyek sebelum build. Skrip itu menolak menulis URL, ID post, atau teks post ke JSON.
