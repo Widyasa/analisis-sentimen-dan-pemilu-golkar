@@ -27,6 +27,21 @@ export function formatTanggal(iso: string): string {
   }).format(new Date(tahun, bulan - 1, hari));
 }
 
+export function unduhCsv(nama: string, header: string[], baris: (string | number)[][]) {
+  const sel = (nilai: string | number) => {
+    const teks = String(nilai);
+    return /[",\n]/.test(teks) ? `"${teks.replaceAll('"', '""')}"` : teks;
+  };
+  const isi = [header, ...baris].map((barisCsv) => barisCsv.map(sel).join(",")).join("\r\n");
+  const blob = new Blob([`\uFEFF${isi}`], { type: "text/csv;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const tautan = document.createElement("a");
+  tautan.href = url;
+  tautan.download = nama;
+  tautan.click();
+  URL.revokeObjectURL(url);
+}
+
 export function formatSelisih(nilai: number): string {
   const angka = formatSuara(Math.abs(nilai));
   if (nilai > 0) return `+${angka}`;

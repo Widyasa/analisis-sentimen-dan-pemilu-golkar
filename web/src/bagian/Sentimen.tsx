@@ -86,6 +86,31 @@ export function Sentimen() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        <div className="bungkus-tabel">
+          <table>
+            <caption>Jumlah post per minggu menurut label prediksi. Minggu tanpa post tidak masuk tabel.</caption>
+            <thead>
+              <tr>
+                <th>Minggu berakhir</th>
+                <th className="angka-kolom">Positif</th>
+                <th className="angka-kolom">Netral</th>
+                <th className="angka-kolom">Negatif</th>
+                <th className="angka-kolom">Jumlah</th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.mingguan.map((baris) => (
+                <tr key={baris.akhirMinggu}>
+                  <td>{formatTanggal(baris.akhirMinggu)}</td>
+                  <td className="angka-kolom">{baris.positif}</td>
+                  <td className="angka-kolom">{baris.netral}</td>
+                  <td className="angka-kolom">{baris.negatif}</td>
+                  <td className="angka-kolom">{baris.positif + baris.netral + baris.negatif}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="sumber">Jumlah post pada berkas, bukan volume seluruh percakapan di X.</p>
       </section>
 
@@ -109,7 +134,46 @@ export function Sentimen() {
               </BarChart>
             </ResponsiveContainer>
           </div>
-          <p className="sumber">Tiga bin di kiri ambang 0,70 perlu dibaca lebih dulu.</p>
+          <table>
+            <caption>Sebaran confidence. Ambang 0,70 bukan angka akurasi model.</caption>
+            <thead>
+              <tr>
+                <th>Rentang confidence</th>
+                <th className="angka-kolom">Jumlah post</th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.confidence.map((baris) => (
+                <tr key={baris.rentang}>
+                  <td>{baris.rentang}</td>
+                  <td className="angka-kolom">{baris.jumlah}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <h3>Alasan tinjauan</h3>
+          <p className="catatan">
+            Satu post dapat punya lebih dari satu alasan. Jumlah di tabel ini adalah kemunculan alasan,
+            bukan jumlah post unik. Post yang ditandai tinjauan berjumlah {s.perluTinjauan}.
+          </p>
+          <table>
+            <caption>Alasan sebuah post ditandai untuk dibaca manusia.</caption>
+            <thead>
+              <tr>
+                <th>Alasan</th>
+                <th className="angka-kolom">Kemunculan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.alasanTinjauan.map((baris) => (
+                <tr key={baris.alasan}>
+                  <td>{baris.alasan}</td>
+                  <td className="angka-kolom">{baris.jumlah}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="sumber">Confidence adalah keyakinan model pada label yang dipilih, bukan akurasi.</p>
         </article>
         <article className="panel">
           <h2>Frasa yang berulang</h2>
@@ -171,9 +235,42 @@ export function Sentimen() {
           </ResponsiveContainer>
         </div>
         </div>
+        <div className="bungkus-tabel">
+          <table>
+            <caption>
+              Jumlah post dan persentase di dalam tiap label sentimen. Persentase memakai jumlah post
+              berlabel itu sebagai penyebut, bukan jumlah seluruh topik.
+            </caption>
+            <thead>
+              <tr>
+                <th>Topik</th>
+                <th className="angka-kolom">Positif</th>
+                <th className="angka-kolom">% dari positif</th>
+                <th className="angka-kolom">Netral</th>
+                <th className="angka-kolom">% dari netral</th>
+                <th className="angka-kolom">Negatif</th>
+                <th className="angka-kolom">% dari negatif</th>
+              </tr>
+            </thead>
+            <tbody>
+              {s.topik.map((baris) => (
+                <tr key={baris.nama}>
+                  <td>{baris.nama}</td>
+                  <td className="angka-kolom">{baris.positif}</td>
+                  <td className="angka-kolom">{formatPersen((baris.positif / s.positif) * 100)}</td>
+                  <td className="angka-kolom">{baris.netral}</td>
+                  <td className="angka-kolom">{formatPersen((baris.netral / s.netral) * 100)}</td>
+                  <td className="angka-kolom">{baris.negatif}</td>
+                  <td className="angka-kolom">{formatPersen((baris.negatif / s.negatif) * 100)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="sumber">
           Sebuah topik tidak otomatis positif atau negatif. Prediksi membaca teks post secara
-          keseluruhan, bukan sikap terhadap Golkar saja. Warna batang diulang pada legenda teks.
+          keseluruhan, bukan sikap terhadap Golkar saja. Warna batang diulang pada legenda dan pada
+          judul kolom tabel.
         </p>
       </section>
     </div>

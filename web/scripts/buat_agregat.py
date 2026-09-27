@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Baca CSV analisis yang sudah ada dan tulis JSON agregat tanpa teks atau identitas post."""
 import json
+import re
 from decimal import Decimal, ROUND_HALF_UP
 from pathlib import Path
 
@@ -146,6 +147,26 @@ harap_kualitas = {
 if kualitas != harap_kualitas:
     raise SystemExit(f"Kualitas sumber tidak sesuai: {kualitas}")
 
+alasan_tinjauan = {}
+for catatan in masuk["alasan_tinjauan"].fillna(""):
+    if not str(catatan).strip():
+        continue
+    for bagian in str(catatan).split(";"):
+        kunci = bagian.strip()
+        alasan_tinjauan[kunci] = alasan_tinjauan.get(kunci, 0) + 1
+alasan_json = [
+    {"alasan": nama, "jumlah": jumlah}
+    for nama, jumlah in sorted(alasan_tinjauan.items(), key=lambda item: (-item[1], item[0]))
+]
+
+detail = pd.read_csv(AKAR / "datasets" / "kpu_suara_partai_dprri_per_provinsi_2024.csv")
+url_provinsi = sorted(set(detail["url_sumber"].astype(str)) | set(ringkas["url_sumber"].astype(str)))
+url_nasional = sorted(set(nasional["sumber_resmi"].astype(str)))
+if url_provinsi != ["https://jdih.kpu.go.id/data/data_kepkpu/2024kpt1050_L2.pdf"]:
+    raise SystemExit(f"URL provinsi tidak tunggal: {url_provinsi}")
+if url_nasional != ["https://jdih.kpu.go.id/data/data_kepkpu/2024kpt1204.pdf"]:
+    raise SystemExit(f"URL nasional tidak tunggal: {url_nasional}")
+
 masuk["tanggal"] = pd.to_datetime(masuk["tanggal_post"])
 mingguan = (
     masuk.groupby([pd.Grouper(key="tanggal", freq="W-SUN"), "sentimen_model"])
@@ -199,6 +220,19 @@ muatan = {
     "jumlahProvinsi": 38,
     "aturanSelisih": str(golkar["aturan_tanda_selisih"].iloc[0]),
     "penyebutPangsa": str(golkar["penyebut_persentase"].iloc[0]),
+    "sumberResmi": {
+        "provinsi": {
+            "nama": "Keputusan KPU Nomor 1050 Tahun 2024 Lampiran II",
+            "url": url_provinsi[0],
+            "barisDetail": int(len(detail)),
+            "barisRingkasan": int(len(ringkas)),
+        },
+        "nasional": {
+            "nama": "Keputusan KPU Nomor 1204 Tahun 2024",
+            "url": url_nasional[0],
+            "baris": int(len(nasional)),
+        },
+    },
     "partai": partai,
     "provinsi": provinsi,
     "pemenangProvinsi": pemenang,
@@ -211,6 +245,7 @@ muatan = {
         "negatif": 39,
         "confidenceDiBawah070": 11,
         "perluTinjauan": 32,
+        "alasanTinjauan": alasan_json,
         "kualitasSumber": {
             "belumDiverifikasi": 62,
             "cuplikanTerpotong": 17,
@@ -228,8 +263,11 @@ muatan = {
 }
 
 teks = json.dumps(muatan, ensure_ascii=False, indent=2)
-larang = ("http://", "https://", "x.com", "record_id", "@")
-for potongan in larang:
+diizinkan = set(url_provinsi + url_nasional)
+for tautan in re.findall(r"https?://[^\"\s]+", teks):
+    if tautan not in diizinkan:
+        raise SystemExit(f"Tautan tidak diizinkan di JSON publik: {tautan}")
+for potongan in ("x.com", "record_id", "teks_post", "@"):
     if potongan in teks:
         raise SystemExit(f"JSON agregat memuat teks yang tidak boleh dipublikasikan: {potongan}")
 

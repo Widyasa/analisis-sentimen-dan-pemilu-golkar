@@ -5,7 +5,7 @@ import { Suara } from "./bagian/Suara";
 import { data } from "./data";
 import { formatPersen, formatSuara } from "./format";
 
-function Temuan() {
+function Temuan({ onBuka }: { onBuka: (tab: Tab, id: string) => void }) {
   const menurutSuara = [...data.provinsi].sort((a, b) => b.suara - a.suara).slice(0, 3);
   const menurutPangsa = [...data.provinsi].sort((a, b) => b.pangsa - a.pangsa).slice(0, 3);
   const pangsa = (data.suaraGolkar / data.totalSuaraSah) * 100;
@@ -17,16 +17,25 @@ function Temuan() {
         <li>
           Golkar memperoleh {formatSuara(data.suaraGolkar)} suara sah, atau {formatPersen(pangsa)} dari{" "}
           {formatSuara(data.totalSuaraSah)} suara sah partai DPR RI, dan berada di peringkat{" "}
-          {data.peringkatNasionalGolkar} nasional.
+          {data.peringkatNasionalGolkar} nasional.{" "}
+          <button type="button" className="lompat" onClick={() => onBuka("suara", "suara-nasional")}>
+            Lihat suara nasional
+          </button>
         </li>
         <li>
           Golkar mendapat suara terbanyak di {data.provinsiPeringkatPertama} dari {data.jumlahProvinsi}{" "}
-          provinsi. Peringkat pertama berarti suara terbanyak, bukan mayoritas.
+          provinsi. Peringkat pertama berarti suara terbanyak, bukan mayoritas.{" "}
+          <button type="button" className="lompat" onClick={() => onBuka("suara", "juara-provinsi")}>
+            Lihat peringkat provinsi
+          </button>
         </li>
         <li>
           Provinsi dengan jumlah suara Golkar terbesar ({menurutSuara.map((baris) => baris.provinsi).join(", ")})
           berbeda dari provinsi dengan pangsa Golkar tertinggi (
-          {menurutPangsa.map((baris) => baris.provinsi).join(", ")}).
+          {menurutPangsa.map((baris) => baris.provinsi).join(", ")}).{" "}
+          <button type="button" className="lompat" onClick={() => onBuka("suara", "jumlah-dan-pangsa")}>
+            Lihat jumlah dan pangsa
+          </button>
         </li>
       </ul>
     </section>
@@ -106,7 +115,14 @@ export default function App() {
         </article>
       </section>
 
-      <Temuan />
+      <Temuan
+        onBuka={(tujuan, id) => {
+          setTab(tujuan);
+          window.setTimeout(() => {
+            document.getElementById(id)?.scrollIntoView({ block: "start" });
+          }, 0);
+        }}
+      />
 
       <div className="tablist" role="tablist" aria-label="Bagian dashboard">
         {TAB.map((item) => (

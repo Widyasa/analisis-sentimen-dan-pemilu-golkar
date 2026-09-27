@@ -88,6 +88,39 @@ h1 {
   border: 1px solid var(--garis);
 }
 
+.lompat {
+  display: inline;
+  margin-left: 6px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--biru);
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.lompat:focus-visible {
+  outline: 2px solid var(--kuning);
+  outline-offset: 2px;
+}
+
+.tabel-teks th,
+.tabel-teks td {
+  white-space: normal;
+}
+
+[id] { scroll-margin-top: 12px; }
+
+caption {
+  caption-side: top;
+  text-align: left;
+  color: var(--redup);
+  font-size: 0.82rem;
+  padding-bottom: 8px;
+  white-space: normal;
+}
+
 .metrik {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -12,7 +12,7 @@ import {
   YAxis,
 } from "recharts";
 import { data, type ProvinsiGolkar } from "../data";
-import { formatJuta, formatPersen, formatSelisih, formatSuara } from "../format";
+import { formatJuta, formatPersen, formatSelisih, formatSuara, unduhCsv } from "../format";
 
 type Urutan = "pangsa" | "suara" | "peringkat";
 type Arah = "naik" | "turun";
@@ -107,7 +107,7 @@ export function Suara() {
         </article>
       </section>
 
-      <section className="panel">
+      <section className="panel" id="suara-nasional">
         <h2>Suara sah nasional 18 partai</h2>
         <p className="catatan">
           Penyebut pangsa nasional adalah {formatSuara(data.totalSuaraSah)} suara sah partai DPR
@@ -137,13 +137,61 @@ export function Suara() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        <div className="bungkus-tabel">
+          <table>
+            <caption>Angka di balik grafik suara nasional. Pangsa memakai seluruh suara sah partai sebagai penyebut.</caption>
+            <thead>
+              <tr>
+                <th>Peringkat</th>
+                <th>Partai</th>
+                <th className="angka-kolom">Suara sah</th>
+                <th className="angka-kolom">Pangsa</th>
+                <th>Ambang 4%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.partai.map((baris, indeks) => (
+                <tr key={baris.nomor}>
+                  <td>{indeks + 1}</td>
+                  <td>{baris.nama}</td>
+                  <td className="angka-kolom">{formatSuara(baris.suara)}</td>
+                  <td className="angka-kolom">{formatPersen(baris.pangsa)}</td>
+                  <td>{baris.ambang}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         <p className="sumber">
-          Sumber: Keputusan KPU Nomor 1204 Tahun 2024. Sumbu mendatar dalam juta suara. Status
-          ambang batas 4 persen ikut pada berkas nasional; Golkar berstatus memenuhi.
+          Sumber:{" "}
+          <a href={data.sumberResmi.nasional.url} target="_blank" rel="noopener noreferrer">
+            {data.sumberResmi.nasional.nama}
+          </a>
+          . Sumbu mendatar dalam juta suara. Status ambang batas 4 persen mengikuti berkas nasional.
         </p>
+        <button
+          type="button"
+          className="lompat"
+          onClick={() =>
+            unduhCsv(
+              "suara_nasional_dpr_ri_2024.csv",
+              ["peringkat", "nomor_partai", "nama_partai", "suara_sah", "pangsa_persen", "status_ambang_batas_4_persen"],
+              data.partai.map((baris, indeks) => [
+                indeks + 1,
+                baris.nomor,
+                baris.nama,
+                baris.suara,
+                baris.pangsa.toFixed(4),
+                baris.ambang,
+              ]),
+            )
+          }
+        >
+          Unduh CSV suara nasional
+        </button>
       </section>
 
-      <section className="panel">
+      <section className="panel" id="juara-provinsi">
         <h2>Siapa suara terbanyak di tiap provinsi</h2>
         <p className="catatan">
           Hitungannya jumlah provinsi, bukan jumlah suara. Golkar memimpin di 14 provinsi. PDI-P
@@ -164,9 +212,15 @@ export function Suara() {
             </BarChart>
           </ResponsiveContainer>
         </div>
+        <p className="catatan">
+          Jumlah provinsi: {juara.map((baris) => `${baris.singkatan} ${baris.jumlah}`).join(", ")}.
+        </p>
         <p className="sumber">
-          Sumber: Keputusan KPU Nomor 1050 Tahun 2024 Lampiran II. Peringkat pertama berarti suara
-          terbanyak, bukan mayoritas.
+          Sumber:{" "}
+          <a href={data.sumberResmi.provinsi.url} target="_blank" rel="noopener noreferrer">
+            {data.sumberResmi.provinsi.nama}
+          </a>
+          . Peringkat pertama berarti suara terbanyak, bukan mayoritas.
         </p>
       </section>
 
@@ -223,7 +277,7 @@ export function Suara() {
             peringkat juga muncul di tooltip.
           </p>
         </article>
-        <article className="panel">
+        <article className="panel" id="jumlah-dan-pangsa">
           <h2>Jumlah suara dan pangsa</h2>
           <p className="catatan">
             Titik di kanan punya banyak suara. Titik di atas punya pangsa besar. Keduanya tidak
@@ -270,6 +324,41 @@ export function Suara() {
       <section className="panel">
         <h2>Tabel Golkar per provinsi</h2>
         <p className="catatan">{data.aturanSelisih}</p>
+        <button
+          type="button"
+          className="lompat"
+          onClick={() =>
+            unduhCsv(
+              "golkar_per_provinsi_dpr_ri_2024.csv",
+              [
+                "provinsi",
+                "peringkat",
+                "suara_golkar",
+                "pangsa_persen",
+                "total_suara_sah_partai_di_provinsi",
+                "partai_pembanding",
+                "peringkat_pembanding",
+                "suara_pembanding",
+                "selisih_suara",
+                "makna_selisih",
+              ],
+              data.provinsi.map((baris) => [
+                baris.provinsi,
+                baris.peringkat,
+                baris.suara,
+                baris.pangsa.toFixed(4),
+                baris.totalProvinsi,
+                baris.pembanding,
+                baris.peringkatPembanding,
+                baris.suaraPembanding,
+                baris.selisih,
+                baris.makna,
+              ]),
+            )
+          }
+        >
+          Unduh CSV Golkar per provinsi
+        </button>
         <div className="alat">
           <input
             aria-label="Cari provinsi atau partai pembanding"

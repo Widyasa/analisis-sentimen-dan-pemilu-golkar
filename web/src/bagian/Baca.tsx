@@ -20,6 +20,30 @@ export function Baca() {
           </li>
           <li>Di Aceh, berkas ini memuat partai nasional untuk DPR RI. Partai lokal pada pemilihan DPRA/DPRK tidak termasuk.</li>
         </ul>
+        <h3>Bagaimana suara diringkas</h3>
+        <p>
+          Berkas provinsi memuat {data.sumberResmi.provinsi.barisDetail} baris: 18 partai di tiap
+          provinsi. Suara 18 partai dijumlahkan dan dicocokkan dengan total provinsi, lalu jumlah
+          tiap partai dicocokkan dengan {data.sumberResmi.nasional.baris} baris hasil nasional.
+          Pangsa di provinsi adalah suara partai dibagi total suara sah partai di provinsi itu.
+          Peringkat mengikuti urutan suara di provinsi tersebut.
+        </p>
+        <h3>Bagaimana unggahan mendapat label</h3>
+        <p>
+          Dari {data.sentimen.jumlahBerkas} baris, {data.sentimen.tidakDiklasifikasikan} ringkasan
+          pengumpul dikeluarkan. {data.sentimen.masukPrediksi} post sisanya diberi label positif,
+          netral, atau negatif oleh model atas seluruh teks. Itu prediksi sentimen, bukan survei dan
+          bukan hasil Pemilu.
+        </p>
+        <p>
+          Topik adalah langkah terpisah. Aturan kata kunci di notebook menandai apakah sebuah post
+          menyebut, misalnya, kursi DPR atau jatah menteri. Satu post dapat masuk lebih dari satu
+          topik. Masuknya sebuah topik tidak otomatis membuat sentimennya positif atau negatif.
+        </p>
+        <p>
+          {data.sentimen.perluTinjauan} post ditandai untuk dibaca manusia. Confidence adalah
+          keyakinan model pada label yang dipilih, bukan akurasi model.
+        </p>
         <h3>Sumber post X</h3>
         <ul className="daftar">
           <li>
@@ -62,9 +86,89 @@ export function Baca() {
           <li>Tidak ada label manusia yang terverifikasi, jadi akurasi tidak ditampilkan.</li>
           <li>Dashboard tidak menampilkan username, tautan akun, atau teks post.</li>
         </ul>
+      </section>
+      <section className="panel">
+        <h2>Katalog data</h2>
+        <div className="bungkus-tabel tabel-teks">
+          <table>
+            <caption>Data yang dipakai dashboard. Teks unggahan dan identitas akun tidak diunduh dari sini.</caption>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Sumber</th>
+                <th>Periode</th>
+                <th className="angka-kolom">Baris</th>
+                <th>Yang dipakai</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Suara sah nasional partai DPR RI</td>
+                <td>
+                  <a href={data.sumberResmi.nasional.url} target="_blank" rel="noopener noreferrer">
+                    {data.sumberResmi.nasional.nama}
+                  </a>
+                </td>
+                <td>Pemilu 2024</td>
+                <td className="angka-kolom">{data.sumberResmi.nasional.baris}</td>
+                <td>Suara tiap partai, total suara sah, dan status ambang batas 4 persen.</td>
+              </tr>
+              <tr>
+                <td>Suara partai per provinsi</td>
+                <td>
+                  <a href={data.sumberResmi.provinsi.url} target="_blank" rel="noopener noreferrer">
+                    {data.sumberResmi.provinsi.nama}
+                  </a>
+                </td>
+                <td>Pemilu 2024</td>
+                <td className="angka-kolom">{data.sumberResmi.provinsi.barisDetail}</td>
+                <td>
+                  {data.jumlahProvinsi} provinsi kali {data.sumberResmi.nasional.baris} partai. Dipakai
+                  untuk memeriksa jumlah dan menentukan peringkat.
+                </td>
+              </tr>
+              <tr>
+                <td>Partai dengan suara terbanyak per provinsi</td>
+                <td>
+                  <a href={data.sumberResmi.provinsi.url} target="_blank" rel="noopener noreferrer">
+                    {data.sumberResmi.provinsi.nama}
+                  </a>
+                </td>
+                <td>Pemilu 2024</td>
+                <td className="angka-kolom">{data.sumberResmi.provinsi.barisRingkasan}</td>
+                <td>Satu baris per provinsi: partai peringkat 1 dan suaranya.</td>
+              </tr>
+              <tr>
+                <td>Ringkasan Golkar per provinsi</td>
+                <td>Dihitung dari berkas provinsi di atas</td>
+                <td>Pemilu 2024</td>
+                <td className="angka-kolom">{data.jumlahProvinsi}</td>
+                <td>Suara, pangsa, peringkat, partai pembanding, dan selisih.</td>
+              </tr>
+              <tr>
+                <td>Post X tentang Golkar</td>
+                <td>Berkas yang sudah ada di proyek, bukan dokumen KPU</td>
+                <td>
+                  {formatTanggal(data.sentimen.tanggalAwal)}–{formatTanggal(data.sentimen.tanggalAkhir)}
+                </td>
+                <td className="angka-kolom">
+                  {data.sentimen.jumlahBerkas} terkumpul, {data.sentimen.masukPrediksi} diprediksi
+                </td>
+                <td>Hanya jumlah, label prediksi, confidence, topik, dan alasan tinjauan. Teks post tidak dibagikan.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <p className="sumber">
-          Sumber suara: Keputusan KPU Nomor 1050 Tahun 2024 Lampiran II dan Keputusan KPU Nomor 1204
-          Tahun 2024. Sumber sentimen: berkas post yang sudah dianalisis di notebook proyek ini.
+          Sumber suara:{" "}
+          <a href={data.sumberResmi.provinsi.url} target="_blank" rel="noopener noreferrer">
+            {data.sumberResmi.provinsi.nama}
+          </a>{" "}
+          dan{" "}
+          <a href={data.sumberResmi.nasional.url} target="_blank" rel="noopener noreferrer">
+            {data.sumberResmi.nasional.nama}
+          </a>
+          . Unduhan CSV ada di tab Hasil suara. Sumber sentimen: berkas post yang sudah dianalisis di notebook.
         </p>
       </section>
     </div>

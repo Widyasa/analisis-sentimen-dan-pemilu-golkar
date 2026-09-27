@@ -6,6 +6,19 @@
   "jumlahProvinsi": 38,
   "aturanSelisih": "Positif bila Golkar peringkat 1 dan selisih dihitung terhadap peringkat 2. Negatif bila Golkar bukan peringkat 1 dan selisih dihitung terhadap peringkat 1.",
   "penyebutPangsa": "total suara sah partai DPR RI di provinsi yang sama",
+  "sumberResmi": {
+    "provinsi": {
+      "nama": "Keputusan KPU Nomor 1050 Tahun 2024 Lampiran II",
+      "url": "https://jdih.kpu.go.id/data/data_kepkpu/2024kpt1050_L2.pdf",
+      "barisDetail": 684,
+      "barisRingkasan": 38
+    },
+    "nasional": {
+      "nama": "Keputusan KPU Nomor 1204 Tahun 2024",
+      "url": "https://jdih.kpu.go.id/data/data_kepkpu/2024kpt1204.pdf",
+      "baris": 18
+    }
+  },
   "partai": [
     {
       "nomor": 3,
@@ -943,6 +956,24 @@
     "negatif": 39,
     "confidenceDiBawah070": 11,
     "perluTinjauan": 32,
+    "alasanTinjauan": [
+      {
+        "alasan": "cuplikan terpotong",
+        "jumlah": 17
+      },
+      {
+        "alasan": "confidence di bawah 0,70",
+        "jumlah": 11
+      },
+      {
+        "alasan": "ada emoji",
+        "jumlah": 4
+      },
+      {
+        "alasan": "berisi tuduhan yang belum diverifikasi",
+        "jumlah": 3
+      }
+    ],
     "kualitasSumber": {
       "belumDiverifikasi": 62,
       "cuplikanTerpotong": 17,
